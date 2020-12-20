@@ -35,26 +35,24 @@ function draw() {
     var damage=0.5 * weight1 * speed1* speed1/thickness*thickness*thickness;
     if(damage>225)
     {
-        bullet1.shapeColor=color(255,0,0);
+        wall.shapeColor=color(255,0,0);
     }
 
     if(damage<125)
     {
-        bullet1.shapeColor=color(0,255,0);
+        wall.shapeColor=color(0,255,0);
     }
   }
   if(wall2.x-bullet2.x < (bullet2.width+wall2.width)/2){
     bullet2.velocityX = 0;
     if(damage>225){
-      bullet2.shapeColor = color(0, 255, 0);
+      wall2.shapeColor = color(0, 255, 0);
     }
     if(damage<125){
-      bullet2.shapeColor = color(255, 0, 0);
+      wall2.shapeColor = color(255, 0, 0);
     }
   }
   
   drawSprites();
  
 }
-
-
